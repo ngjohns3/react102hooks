@@ -1,0 +1,27 @@
+Learning Objectives
+	useState Hook
+	useEffect Hook
+	Writing your own hooks
+Online Course
+	Section 26- React Hooks (skip legacy content)
+Supplemental Material
+	Hooks overview- https://reactjs.org/docs/hooks-overview.html
+	Examples of hooks in action- https://www.robinwieruch.de/react-function-component
+Project
+	For this project you will need to rewrite the "Aside" component in the Giphy Explorer project from the React 102 course. Aside is a class component that can be changed into a functional component that still manages state through reacts hooks. 
+	First you will need to convert the component into a functional component. Then implement the useState hook to manage state for the Aside component. Then, use the useEffect hook in place of componentDidUpdate to fetch information from the giphy API. 
+
+
+
+
+Learning Objectives
+	Leverage react-router to show different content based on the url
+	Understand how the Switch component affects which Routes render based on the url
+	Understand how Link components differ from HTML anchor tags
+	Know when to use the different routing-related props
+	Know how to extract and parse query parameters
+Supplemental Material
+	Router Hooks
+
+
+
