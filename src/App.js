@@ -1,3 +1,4 @@
+//comment everything
 import React, { useState } from "react";
 import Main from "./Main";
 import Header from "./Header";
@@ -6,13 +7,16 @@ import Aside from "./Aside";
 import "./App.css";
 import { getGifsFromSearch } from "./api";
 
+//Hooks can't be used in class components, so use them in functional components
 const App = () => {
-  // query, queryError, executedQuery
+  //"query" is tracking input in the textbox, therefore it needs a separate state in order to maintain it as a controlled component
   const [query, setQuery] = useState("");
+  //queryError is what the user sees on the page when an error occurs
   const [queryData, setQueryData] = useState({
     executedQuery: "",
     queryError: ""
   });
+  //It's best practice to separate out your state variables based on the values they're maintaining
   const [images, setImages] = useState([]);
   const [usernameQuery, setUsernameQuery] = useState("");
   //API constants don't need to be saved to state because they don't change, so we create a filters object to be saved to state instead
@@ -83,6 +87,7 @@ const App = () => {
           executedQuery: query,
           queryError
         });
+        //clears the search box
         setQuery("");
       })
       .catch(error => {
@@ -91,6 +96,7 @@ const App = () => {
           executedQuery: query,
           queryError
         });
+        //clears the search box
         setQuery("");
       });
   }

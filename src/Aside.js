@@ -5,8 +5,7 @@ import { getGifsByUsername } from "./api.js";
 const Aside = props => {
   const [images, setImages] = useState([]);
   const [errorMsg, setError] = useState("");
-  //separate useState for errors
-  //params effect, array of params
+
   useEffect(() => {
     // set query parameters and reset error message
     const { rating, lang } = props.filters;
@@ -26,7 +25,8 @@ const Aside = props => {
         });
     }
   }, [props.usernameQuery, props.api, props.filters]);
-
+  //You can pass a second parameter to useEffect (the first being our arrow function). The second param is an array of "dependencies"
+  //useEffect should only trigger when these dependencies are changed
   let sidebarClass = props.usernameQuery.length ? "hasSidebar" : "";
   let imageList = [];
   if (errorMsg === "") {
